@@ -1,8 +1,8 @@
 package technologiaprogramowania;
 
 public class Fruit {
-    private String name;
-    private double pricePerKilogram;
+    final private String name;
+    final private double pricePerKilogram;
     private int quantity;
 
     public Fruit(String name, double pricePerKilogram, int quantity) {

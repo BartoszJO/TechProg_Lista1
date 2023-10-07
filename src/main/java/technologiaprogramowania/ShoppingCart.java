@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ShoppingCart {
 
-    private List<Fruit> items;
+    final private List<Fruit> items;
 
     public ShoppingCart() {
         items = new ArrayList<>();

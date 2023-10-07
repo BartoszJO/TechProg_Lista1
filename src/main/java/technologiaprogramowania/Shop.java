@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Shop {
 
-    private List<Fruit> availableFruits;
-    private ShoppingCart shoppingCart;
+    final private List<Fruit> availableFruits;
+    final private ShoppingCart shoppingCart;
 
     public Shop(List<Fruit> availablrFruits) {
         this.availableFruits = availablrFruits;
