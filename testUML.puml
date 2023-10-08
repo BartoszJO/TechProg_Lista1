@@ -1,0 +1,44 @@
+@startuml
+
+package technologiaprogramowania {
+    class Fruit {
+        - final name: String
+        - final pricePerKilogram: double
+        - quantity: int
+        + Fruit(name: String, pricePerKilogram: double, quantity: int)
+        + getName(): String
+        + getPricePerKilogram(): double
+        + getQuantity(): int
+        + setQuantity(quantity: int): void
+        + toString(): String
+    }
+
+    class ShoppingCart {
+        - items: List<Fruit>
+        + ShoppingCart()
+        + addItem(fruit: Fruit, quantity: int): void
+        + sumOfPrices(): double
+        + showCart(): void
+    }
+
+    class Shop {
+        - availableFruits: List<Fruit>
+        - shoppingCart: ShoppingCart
+        + Shop(availableFruits: List<Fruit>)
+        + getShoppingCart(): ShoppingCart
+        + displayAvailableFruits(): void
+        + addToCart(fruit: Fruit, quantity: int): void
+        + processPurchase(): void
+    }
+
+    class Main {
+        + main(args: String[]): void
+    }
+}
+
+Main --> Shop
+Shop --> ShoppingCart
+Shop --> Fruit
+ShoppingCart --> Fruit
+
+@enduml
