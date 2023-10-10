@@ -45,7 +45,7 @@ public class ShoppingCart {
     public double sumOfPrices() {
         double sum = 0.0;
         for (Fruit item : items) {
-            sum += item.getPricePerKilogram() * item.getQuantity();
+            sum += item.getPricePerKilogram() * item.getQuantity(); // cena razy ilosc = cena za calosc dla owocu
         }
         return sum;
     }

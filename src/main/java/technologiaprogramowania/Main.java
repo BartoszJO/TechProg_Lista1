@@ -41,8 +41,9 @@ public class Main {
             System.out.println("4. Dokonaj zakupu");
             System.out.println("5. Wyjscie");
             System.out.println("--> Wybierz opcję: ");
-            System.out.println(availableFruits.get(0)); // wywoluje sie metoda toString() w Fruit.java
-            System.out.println(availableFruits.get(1)); // -||-
+//            System.out.println(availableFruits.get(0)); // wywoluje sie metoda toString() w Fruit.java
+//            System.out.println(availableFruits.get(1)); // -||-
+//            System.out.println(availableFruits.get(2)); // wypisanie dostepnych owocow oraz ich cen oraz ilosci
 
             try {
 
@@ -70,7 +71,7 @@ public class Main {
                         // W petli zmienna fruit przyjmuje wartosc kolejnego elementu listy availableFruits
                         for (Fruit fruit : availableFruits) {
                             if (fruit.getName().equalsIgnoreCase(fruitName)) {
-                                foundFruit = fruit;
+                                foundFruit = fruit; // przypisanie wartosci do foundFruit, wiec juz nie jest nullem
                                 break;
                             }
                         }
@@ -126,7 +127,7 @@ public class Main {
 
         // Warunek reguluje, czy program ma dalej dzialac, czy nie
         // podanie 5 w panelu uzytkownika powoduje zakonczenie zakupow
-        } while (choice != 5);
+        } while (choice != 5); // petla do while bedzie sie wykonywac dopoki nie podamy 5 jako argument
         scanner.close();
     }
 

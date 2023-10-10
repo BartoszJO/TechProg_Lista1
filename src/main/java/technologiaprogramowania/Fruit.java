@@ -2,8 +2,7 @@ package technologiaprogramowania;
 
 // Klasa owocow
 public class Fruit {
-    final private String name; // zmienne sa dostepne tylko wewnatrz klasy, aby inne zmienne z innych klas
-    // o takiej samej nazwie nie kolidowaly z tymi
+    final private String name; // zmienne sa dostepne tylko wewnatrz klasy, aby po zainicjowaniu nazwy nie mozna juz go zmienic
 
     final private double pricePerKilogram;
     private int quantity;
